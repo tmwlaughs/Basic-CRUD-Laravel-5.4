@@ -3,14 +3,14 @@ Basic CRUD using laravel 5.4
 Unstyled cause I still don't understand CSS or Bootstrap  
 To use this just clone this repo then run:  
 
-**composer install**  
+`composer install`  
 
-**cp .env.example .env**  
+`cp .env.example .env`
 
-**php artisan key:generate**  
+`php artisan key:generate`
 
 Setup your .env  
 
-**php artisan migrate**  
+`php artisan migrate`
 
-**php artisan serve**
+`php artisan serve`
