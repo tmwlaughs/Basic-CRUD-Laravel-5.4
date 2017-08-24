@@ -1,6 +1,5 @@
 # Basic-CRUD-Laravel-5.4
-Basic CRUD using laravel 5.4  
-Unstyled cause I still don't understand CSS or Bootstrap  
+Basic CRUD using laravel 5.4 styled with bootstrap
 To use this just clone this repo then run:  
 
 `composer install`  
