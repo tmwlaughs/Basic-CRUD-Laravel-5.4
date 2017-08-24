@@ -6,15 +6,14 @@
 			<div class="panel-heading">
 				<h2>List of the posts</h2>
 			</div>
-			<div class="panel-body">
-				<a href="crud/create" class="btn btn-primary" role="button">Post Something</a>
-				<table class="table table-bordered">
+			<div class=""
+				<a href="crud/create">Post Something</a>
+				<table>
 					<thead>
 						<tr>
 							<th>ID</th>
 							<th>Name</th>
 							<th>Post</th>
-							<th colspan="2" class="text-center">Action</th>
 						</tr>
 					</thead>
 
@@ -24,19 +23,18 @@
 							<td>{{ $post['id'] }}</td>
 							<td>{{ $post['name'] }}</td>
 							<td>{{ $post['post'] }}</td>
-							<td class="text-center"><a href="/crud/{{$post->id}}/edit" class="btn btn-info" role="button">Edit</a></td>
-							<td class="text-center">
-								<form method="POST" action="/crud/{{$post->id}}">
+							<td><a href="{{ action('CRUDController@edit', $post['id']) }}">Edit</a></td>
+							<td>
+								<form method="POST" action="{{ action('CRUDController@destroy', $post['id']) }}">
 								{{ csrf_field() }}
 								{{ method_field('DELETE') }}
-								<button type="submit" class="btn btn-danger">Delete</button>
+								<button type="submit">Delete</button>
 								</form>
 							</td>
 						</tr>
 					@endforeach
 					</tbody>
 				</table>
-			</div>
 		</div>
 	</div>
 @endsection
